@@ -9,6 +9,7 @@ class Product:
         self.stock += amount
         print(self.stock)
         
+        
     def sell(self,amount):
         if amount <= self.stock:
             self.stock -= amount
@@ -20,3 +21,5 @@ class Product:
         print(f"Name:{self.name}")
         print(f"price:{self.price}")
         print(f"category:{self.category}")
+        
+        
