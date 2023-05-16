@@ -14,5 +14,6 @@ class Payments:
 payment1 = Payments(order="oranges", method="mpesa", amount=1000)
 payment1.process_payment()
 
-payment2 = Payments(order="kales", method="mpesa", amount=300)
+
+payment2 = Payments(order="carrots", method="mpesa", amount=300)
 payment3 = Payments(order="mangoes", method="account number", amount=200)
