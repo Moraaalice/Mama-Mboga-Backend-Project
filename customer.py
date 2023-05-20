@@ -3,7 +3,7 @@ class Cart:
     def __init__(self, item, phone_number, payment,address):
         self.name = item
         self.phone_number = phone_number
-        self.email = payment
+        self.payment = payment
         self.address = address
         self.cart = []
 
