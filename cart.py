@@ -1,8 +1,7 @@
 #cart
 class Cart:
-    def __init__(self, item, phone_number, payment,address):
+    def __init__(self, item, payment,address):
         self.name = item
-        self.phone_number = phone_number
         self.payment = payment
         self.address = address
         self.cart = []
