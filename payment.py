@@ -1,18 +1,32 @@
-
-class Payments:
-    def __init__(self, order, method, amount):
-        self.order = order
-        self.method = method
+class Payment:
+    def __init__(self, amount, method, date, receipt, status, order):
         self.amount = amount
+        self.method = method
+        self.date = date
+        self.receipt = receipt
+        self.status = status
+        self.order = order
+    
+    def verify_confirm(self):
+        if self.method == "M_pesa":
+            self.status = "verified"
+        elif self.method == "Bank":
+            self.status = "confirmed"
+        elif self.method =="Cash":
+            self.status = "Processed"        
+        else:
+            self.status = "unknown"
 
-    def process_payment(self):
-        print("Payment processing")
+payment1 = Payment(amount=1000, method="M_pesa", date="2023-05-23", receipt="123456", status="pending", order="ABC123")
+payment1.verify_confirm()
 
-    def processed_payment(self):
-        print("Payments processed")
+print(payment1.status)
 
-payment1 = Payments(order="oranges", method="mpesa", amount=1000)
-payment1.process_payment()
+        
+        
 
-payment2 = Payments(order="kales", method="mpesa", amount=300)
-payment3 = Payments(order="mangoes", method="account number", amount=200)
+            
+
+
+
+            
